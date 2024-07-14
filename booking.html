@@ -1,0 +1,502 @@
+<!DOCTYPE html><html data-wf-domain="inforequest.github.io/design-DojoFunding/" lang="en"><head><meta charset="utf-8"/><title>Dojo Info</title><meta content="width=device-width, initial-scale=1" name="viewport"/></script><link href="styles.css" rel="stylesheet" type="text/css"/><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="assets/favicon.png" rel="shortcut icon" type="image/x-icon"/>/><script defer data-domain="dojo-info.tech" src="scripts.js"></script>
+
+
+    <!-- Keep this css code to improve the font quality-->
+    <style>
+      * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -o-font-smoothing: antialiased;
+    }
+    </style>
+    
+    <script
+        data-id-scroll
+        data-autoinit="true"
+        data-duration="1"
+        data-orientation="vertical"
+        data-smoothWheel="true"
+        data-smoothTouch="false"
+        data-touchMultiplier="1.15"
+        data-easing="(t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t))"
+        data-useOverscroll="true"
+        data-useControls="true"
+        data-useAnchor="true"
+        data-useRaf="true"
+        data-infinite="false"
+        defer
+        src="script.txt">
+    </script></head><body><div class="page-wrapper"><div class="global-styles w-embed"><style>
+    
+      html { font-size: calc(0.625rem + 0.41666666666666663vw); }
+      @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
+      @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
+      @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
+    
+    
+    /* Set color style to inherit */
+    .inherit-color * {
+        color: inherit;
+    }
+    
+    /* Focus state style for keyboard navigation for the focusable elements */
+    *[tabindex]:focus-visible,
+      input[type="file"]:focus-visible {
+       outline: 0.125rem solid #4d65ff;
+       outline-offset: 0.125rem;
+    }
+    
+    /* Get rid of top margin on first element in any rich text element */
+    .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+      margin-top: 0 !important;
+    }
+    
+    /* Get rid of bottom margin on last element in any rich text element */
+    .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* Prevent all click and hover interaction with an element */
+    .pointer-events-off {
+        pointer-events: none;
+    }
+    
+    /* Enables all click and hover interaction with an element */
+    .pointer-events-on {
+      pointer-events: auto;
+    }
+    
+    /* Create a class of .div-square which maintains a 1:1 dimension of a div */
+    .div-square::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+    
+    /* Make sure containers never lose their center alignment */
+    .container-medium,.container-small, .container-large {
+        margin-right: auto !important;
+      margin-left: auto !important;
+    }
+    
+    /* 
+    Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+    Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+    Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+    */
+    /*
+    a,
+    .w-input,
+    .w-select,
+    .w-tab-link,
+    .w-nav-link,
+    .w-dropdown-btn,
+    .w-dropdown-toggle,
+    .w-dropdown-link {
+      color: inherit;
+      text-decoration: inherit;
+      font-size: inherit;
+    }
+    */
+    
+    /* Apply "..." after 3 lines of text */
+    .text-style-3lines {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    
+    /* Apply "..." after 2 lines of text */
+    .text-style-2lines {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    
+    /* Adds inline flex display */
+    .display-inlineflex {
+      display: inline-flex;
+    }
+    
+    /* These classes are never overwritten */
+    .hide {
+      display: none !important;
+    }
+    
+    @media screen and (max-width: 991px) {
+        .hide, .hide-tablet {
+            display: none !important;
+        }
+    }
+      @media screen and (max-width: 767px) {
+        .hide-mobile-landscape{
+          display: none !important;
+        }
+    }
+      @media screen and (max-width: 479px) {
+        .hide-mobile{
+          display: none !important;
+        }
+    }
+     
+    .margin-0 {
+      margin: 0rem !important;
+    }
+      
+    .padding-0 {
+      padding: 0rem !important;
+    }
+    
+    .spacing-clean {
+    padding: 0rem !important;
+    margin: 0rem !important;
+    }
+    
+    .margin-top {
+      margin-right: 0rem !important;
+      margin-bottom: 0rem !important;
+      margin-left: 0rem !important;
+    }
+    
+    .padding-top {
+      padding-right: 0rem !important;
+      padding-bottom: 0rem !important;
+      padding-left: 0rem !important;
+    }
+      
+    .margin-right {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important;
+      margin-left: 0rem !important;
+    }
+    
+    .padding-right {
+      padding-top: 0rem !important;
+      padding-bottom: 0rem !important;
+      padding-left: 0rem !important;
+    }
+    
+    .margin-bottom {
+      margin-top: 0rem !important;
+      margin-right: 0rem !important;
+      margin-left: 0rem !important;
+    }
+    
+    .padding-bottom {
+      padding-top: 0rem !important;
+      padding-right: 0rem !important;
+      padding-left: 0rem !important;
+    }
+    
+    .margin-left {
+      margin-top: 0rem !important;
+      margin-right: 0rem !important;
+      margin-bottom: 0rem !important;
+    }
+      
+    .padding-left {
+      padding-top: 0rem !important;
+      padding-right: 0rem !important;
+      padding-bottom: 0rem !important;
+    }
+      
+    .margin-horizontal {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important;
+    }
+    
+    .padding-horizontal {
+      padding-top: 0rem !important;
+      padding-bottom: 0rem !important;
+    }
+    
+    .margin-vertical {
+      margin-right: 0rem !important;
+      margin-left: 0rem !important;
+    }
+      
+    .padding-vertical {
+      padding-right: 0rem !important;
+      padding-left: 0rem !important;
+    }
+    
+    /* Apply "..." at 100% width */
+    .truncate-width { 
+            width: 100%; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+    }
+    /* Removes native scrollbar */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none; 
+    }
+    
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .w--redirected-checked + input + span {
+    color: white;
+    }
+    
+    .radio-bg
+    {   
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    .radio-bg:checked {
+    background: #00bd83;
+    }
+    
+    
+    .radio-bg:checked + .form_radio-text {
+    color: white;
+    }
+    
+    [color-mode="light"] {
+    background-color: var(--light-hero-bg);
+    }
+    
+    [color-mode="light"] .btn_main_texta {
+    color: var(--base-color-brand--black);
+    }
+    
+    [color-mode="light"] .btn_main_texta.text-color-white70 {
+    color: var(--base-color-brand--black);
+    opacity: 0.6;
+    }
+    
+    [color-mode="light"] .btn_main_innera.is-secondary {
+    background-color: var(--base-color-neutral--white);
+    }
+    
+    [color-mode="light"] .btn_main_innera.hover.is-secondary {
+    background-color: var(--base-color-brand--green1);
+    }
+    
+    [color-mode="light"] .btn_main_innera.hover.is-secondary .btn_main_texta {
+    color: white;
+    }
+    
+     [color-mode="light"] .navbar_container {
+    background-color: #ffffff00
+    }
+    
+     [color-mode="light"] .dot-icon {
+    color: rgb(0, 0, 0)
+    }
+    
+    
+      @media screen and (max-width: 991px) {
+     [color-mode="light"] .navbar_container, [color-mode="light"] .navbar_menu, [color-mode="light"]  {
+    background-color: var(--light-hero-bg)!important;
+    }
+    
+    [color-mode="light"] .menu-icon_line-top, [color-mode="light"] .menu-icon_line-middle, [color-mode="light"] .menu-icon_line-bottom {
+    background-color: black;
+    }
+    
+    [color-mode="light"] .menu-icon {
+    background-color: white;
+    }
+    
+    }
+    
+    </style></div><div data-animation="default" class="navbar_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" color-mode="dark" data-easing="ease" data-collapse="medium" data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c3e" role="banner" data-duration="400"><div class="navbar_container"><a href="index.html" aria-current="page" class="navbar_logo-link w-nav-brand w--current"><img src="assets/logo.png" loading="lazy" width="101" alt="" class="navbar_logo"/></a><div role="navigation" id="w-node-_80b02e9c-4625-dada-3aba-8eeb7d438c42-7d438c3e" class="navbar_menu is-page-height-tablet w-nav-menu"><a data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c43" href="/company" class="button-link w-inline-block"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="currentColor"/>
+    </svg></div><button data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c45" class="button-block"><div class="button-text"><div class="btn_main_texta is-navbar">Dojo Go</div></div><div class="button-text is-absolute"><div class="btn_main_texta text-color-white70 is-navbar">Dojo Go</div></div></button></a><div class="spacer-32 is-tablet"></div><a data-w-id="905f675e-7a00-aafd-95f4-f82c56431ad0" href="#" class="button-link w-inline-block"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="currentColor"/>
+    </svg></div><button data-w-id="905f675e-7a00-aafd-95f4-f82c56431ad2" class="button-block"><div class="button-text"><div class="btn_main_texta is-navbar">Dojo Funding</div></div><div class="button-text is-absolute"><div class="btn_main_texta text-color-white70 is-navbar">Dojo Funding</div></div></button></a><div class="spacer-32 is-tablet"></div><div data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c4d" href="#" class="button1-link"><div class="dot-icon padding-right-8 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="currentColor"/>
+    </svg></div><a href="assets/Dojo Funding.pdf" target="_blank" class="link-docs w-inline-block"><button data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c4f" class="button-block"><div class="button-text"><div class="btn_main_texta is-navbar"></div></div><div class="button-text is-absolute"><div class="btn_main_texta text-color-white70 is-navbar"></div></div></button></a></div><div class="spacer-32 is-tablet"></div><a data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c57" href="#" class="button-link w-inline-block"><div class="dot-icon padding-right-8 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="currentColor"/>
+    </svg></div><button data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c59" class="button-block"><div class="button-text"><div class="btn_main_texta is-navbar">Dojo Booking</div></div><div class="button-text is-absolute"><div class="btn_main_texta text-color-white70 is-navbar">Dojo Booking</div></div></button></a><div class="spacer-32 is-tablet"></div><a data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c61" href="#" class="button1-link w-inline-block"><div class="dot-icon padding-right-8 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="currentColor"/>
+    </svg></div><button data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c63" class="button-block"><div class="button-text"><div class="btn_main_texta is-navbar"></div></div><div class="button-text is-absolute"><div class="btn_main_texta text-color-white70 is-navbar"></div></div></button></a><div class="spacer-40 is-tablet"></div><div class="button-group flex-vertical gap-17"><a data-button-style="solid" data-btn="wrap" id="w-node-_80b02e9c-4625-dada-3aba-8eeb7d438c6c-7d438c3e" href="#" class="btn_main_wrap is-navbar w-inline-block"><div class="btn_main_innera is-secondary is-navbar"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="btn_main_texta">Contact Us</div></div><div data-btn="clip" class="btn_main_innera hover is-secondary is-navbar-100"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="white"/>
+    </svg></div><div class="btn_main_texta">Contact US</div></div></a><a data-button-style="solid" data-btn="wrap" id="w-node-_80b02e9c-4625-dada-3aba-8eeb7d438c75-7d438c3e" href="#" class="btn_main_wrap is-tablet is-navbar w-inline-block"><div class="btn_main_innera is-navbar"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="btn_main_texta is-primary">Book a call</div></div><div data-btn="clip" class="btn_main_innera hover is-navbar"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="white"/>
+    </svg></div><div class="btn_main_texta is-primary text-color-white">Book a call</div></div></a></div></div><div id="w-node-_80b02e9c-4625-dada-3aba-8eeb7d438c7e-7d438c3e" class="navbar_button-wrapper gap-12"><a data-button-style="solid" data-btn="wrap" id="w-node-e7118f09-d73a-7c29-77f8-1ad4deb387a4-7d438c3e" href="contact.html" class="btn_main_wrap hide w-inline-block"><div class="btn_main_innera"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="btn_main_texta is-primary">Log In</div></div><div data-btn="clip" class="btn_main_innera hover"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="white"/>
+    </svg></div><div class="btn_main_texta is-primary text-color-white">Log In</div></div></a><a data-button-style="solid" data-btn="wrap" id="w-node-_80b02e9c-4625-dada-3aba-8eeb7d438c7f-7d438c3e" href="signup.html" class="btn_main_wrap hidden-tablet w-inline-block"><div class="btn_main_innera is-secondary"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="btn_main_texta">Apply now</div></div><div data-btn="clip" class="btn_main_innera hover is-secondary"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="white"/>
+    </svg></div><div class="btn_main_texta">Apply now</div></div></a><div data-w-id="80b02e9c-4625-dada-3aba-8eeb7d438c88" class="navbar_menu-button w-nav-button"><div class="menu-icon"><div class="menu-icon_line-top"></div><div class="menu-icon_line-middle"><div class="menu-icon_line-middle-inner"></div></div><div class="menu-icon_line-bottom"></div></div></div></div></div></div><main class="main-wrapper"><header class="section_home-hero"><div class="padding-global"><div class="container-1280 z-index-9999"><div class="hero_header-wrapper"><div class="header_content"><div class="hero-tag hide"><div class="icon-embed-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 9 9" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+    <path d="M7.9375 0.21875L8.6875 0.96875L1.45312 8.21875L0.6875 7.46875L7.9375 0.21875ZM8.90625 0V4.375H7.9375V0.953125H4.51562V0H8.90625Z" fill="currentColor"/>
+    </svg></div><div class="btn_main_texta mobile-wrap mobile-size-12">Dojo Booking,<br/> at your service.</div></div><h1 class="heading-style-h1 text-color-white">Dojo Booking,<br/> at your service.</h1><div class="spacer-24"></div><p class="text-subheading is-white opacity60">Get discovered by new customers, take reservations and seat diners automatically. Run your restaurant easily with a single online system.</p><div class="spacer-32"></div><div class="button-group"><a data-button-style="solid" data-btn="wrap" id="w-node-_7193280e-9eb2-7894-56cb-96474cb4eef9-06c321c7" href="contact.html" class="btn_main_wrap w-inline-block"><div class="btn_main_innera"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="btn_main_texta is-primary">Book a call</div></div><div data-btn="clip" class="btn_main_innera hover"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+      <circle cx="1.5" cy="2" r="1.5" fill="white"/>
+    </svg></div><div class="btn_main_texta is-primary text-color-white">Book a call</div></div></a><a href="#" class="w-inline-block"><button data-w-id="dca47da9-afe6-780c-eb04-8fd2d0770f9a" class="button-link-arrow"><div class="button-icon-wrap-secondary"><div style="-webkit-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="button-text-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+      <path d="M7.05703 0.712928L7.78707 1.44297L0.745247 8.5L0 7.76996L7.05703 0.712928ZM8 0.5V4.75856H7.05703V1.42776H3.72624V0.5H8Z" fill="white"/>
+    </svg></div><div style="-webkit-transform:translate3d(-15px, 10px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-15px, 10px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-15px, 10px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-15px, 10px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="button-text-icon is-absolute w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+      <path d="M7.05703 0.712928L7.78707 1.44297L0.745247 8.5L0 7.76996L7.05703 0.712928ZM8 0.5V4.75856H7.05703V1.42776H3.72624V0.5H8Z" fill="white"/>
+    </svg></div></div><div class="btn_main_texta">Go to Docs</div></button></a></div></div><div class="header_3d-wrapper is-dark-bg"><img src="assets/parnership.png" alt="partnership" class="partnership"></div></div></div></div><div class="container-1278 is-absolute"><div class="w-layout-grid _3-col_grid-base is-absolute"><div id="w-node-_04acdb9b-046e-0e5f-3de1-47ea53f85f78-53f85f76" class="is-grid-lines is-top is-white"></div><div id="w-node-_04acdb9b-046e-0e5f-3de1-47ea53f85f79-53f85f76" class="is-grid-lines is-right is-top is-white"></div></div></div></div></header><section class="section_home-evals"><div class="padding-global is-no-padding-mobile"><div class="gray1-shape_wrapper"><div class="container-1278"><div class="padding-vertical padding-custom1"><div class="center-text_wrapper"><div class="max-width-400"><h2>Let's get you started</h2></div></div><div class="spacer-100 spacer-60-mobile"></div><div class="w-layout-grid _3-col_grid-base is-absolute"><div id="w-node-_35f5a1cd-3122-a15f-1408-f9f01a59e4cd-06c321c7" class="is-grid-lines is-top"></div><div id="w-node-fb95fa73-6383-e80d-5837-4a6474f2c091-06c321c7" class="is-grid-lines is-right is-top"></div></div><div class="w-layout-grid _3-col_grid-base"><div id="w-node-_5a567b29-73a0-761b-340d-3dbb359ab793-06c321c7" class="_3-col_item"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="text-body1 is-green">01</div></div><div class="spacer-60"></div><h3><br/>First round on us<br/>30 days free trial</h3><div class="spacer-24 mobile-16"></div><p class="text-body1 text-color-gray-dark2">Start with a one-month free trial and take your lines online, manage your restaurant reservations, or get more hungry diners to your tables.</p><div class="blob-evals w-embed"><video class="eval-video" id="videoHubspot" muted="muted" autoplay="autoplay" playsinline preload="auto" loop class="work-project_video" data-custom-attribute="video" width="100%" height="100%">
+      <source src="#"> 
+    </video>
+    
+    <img id="accuracy-video-mobile" width="100%" height="100%" display="none" autoplay="autoplay" preload="metadata" playsinline muted="on" class="is-mobile-only" loop="loop" src="#" alt="Decorative video with abstract shapes"></div></div><div id="w-node-_5a567b29-73a0-761b-340d-3dbb359ab7a1-06c321c7" class="_3-col_item"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="text-body1 is-green">02</div></div><div class="spacer-60"></div><h3 class="z-index3">Handle bookings<br/>with ease</h3><div class="spacer-24"></div><p class="text-body1 text-color-gray-dark2">Manage any booking, from walk-ins to online – in one place, on any device. And save time with automatic table seating and deposits.</p><div class="blob-evals w-embed"><video class="eval-video" id="videoHubspot" muted="muted" autoplay="autoplay" playsinline preload="auto" loop class="work-project_video" data-custom-attribute="video" width="100%" height="100%">
+      <source src="#" type="video/mp4"> 
+      
+    </video>
+    
+    <img id="accuracy-video-mobile" width="100%" height="100%" display="none" autoplay="autoplay" preload="metadata" playsinline muted="on" class="is-mobile-only" loop="loop" src="#" alt="Decorative video with abstract shapes"></div></div><div id="w-node-_5a567b29-73a0-761b-340d-3dbb359ab7af-06c321c7" class="_3-col_item"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="text-body1 is-green">03</div></div><div class="spacer-60"></div><h3 class="z-index3">Enhanced visibility<br/>of your bookings</h3><div class="spacer-24"></div><p class="text-body1 text-color-gray-dark2">Take bookings from Google or your own site, launch offers or get discovered by over 850,000 customers on the Dojo diner's booking app.</p><div class="blob-evals w-embed"><video class="eval-video" muted="muted" autoplay="autoplay" playsinline preload="auto" loop class="work-project_video" data-custom-attribute="video" width="100%" height="100%">
+      <source src="#" type="video/mp4"> 
+    </video>
+    
+    <img id="accuracy-video-mobile" width="100%" height="100%" display="none"  autoplay="autoplay" preload="metadata" playsinline muted="on" class="is-mobile-only" loop="loop" src="#" alt="Decorative video with abstract shapes"></div></div><div id="w-node-_5a567b29-73a0-761b-340d-3dbb359ab7bd-06c321c7" class="is-grid-lines"></div><div id="w-node-_5a567b29-73a0-761b-340d-3dbb359ab7be-06c321c7" class="is-grid-lines is-right"></div></div><div class="spacer-164 spacer-60-mobile"></div><div class="evals-bottom_wrapper"><div class="center-text_wrapper"><div class="max-width-700"><h3 class="is-title-padding">From local businesses to global enterprises, </h3></div></div><div class="spacer-80"></div><div class="w-layout-grid _3-col_grid-base is-logos"><img src="assets/logo4.png" loading="lazy" width="Auto" height="Auto" alt="" id="w-node-_62c4473e-62c2-27fc-fc75-6bb85a5173d3-06c321c7" class="evals-logos_logo-wrapper is-right"/><img src="assets/logo2.png" loading="lazy" width="Auto" height="Auto" alt="" id="w-node-a7733527-e023-28cb-783c-ff8ebe6f0546-06c321c7" class="evals-logos_logo-wrapper"/><img src="assets/logo3.png" loading="lazy" width="Auto" height="Auto" alt="" id="w-node-_21f0a8ed-c65a-6791-9b2d-5b90a157743c-06c321c7" class="evals-logos_logo-wrapper"/><img src="assets/logo1.png" loading="lazy" width="Auto" height="40" alt="" id="w-node-_89d04cc6-fdba-7dd0-4874-b6dd1425a821-06c321c7" class="evals-logos_logo-wrappermobile"/><div id="w-node-_19a6738e-a3f6-e138-9a71-085cdc664a7d-06c321c7" class="grid-line-middle"></div><div id="w-node-_77367abf-5151-44e8-ec0f-89073ddab1e4-06c321c7" class="divider-grid is-mobile"></div></div></div></div></div></div></div></section><section class="section_home-accuarcy"><div class="padding-global"><div class="container-1280"><div class="center-text_wrapper is-gap-40"><h2 class="max-width-500">Set your business up for success</h2><video class="testimony-up" width="100%" height="auto" controls preload="metadata"><source src="assets/dojovid.mp4#t=1.500" type="video/mp4"> Your browser does not support the video.</video></div><div class="spacer-160"></div></div><div class="container-1278 is-padding"><div class="w-layout-grid _3-col_grid-base is-absolute"><div id="w-node-_300dcd69-4c78-9197-75c8-98b189e09d55-06c321c7" class="is-grid-lines is-top"></div><div id="w-node-_300dcd69-4c78-9197-75c8-98b189e09d56-06c321c7" class="is-grid-lines is-right is-top"></div></div></div></div><div class="accuarcy-cards_layout"><div data-w-id="141737b3-8daf-9844-52b5-e1576b7f4ae0" class="accuracy-card_item"><div class="accuarcy-card-content_wrapper"><div id="w-node-_141737b3-8daf-9844-52b5-e1576b7f4ae1-06c321c7" class="max-width-454"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="text-body1 is-green">01</div></div><div class="spacer-60"></div><h3>Why Business<br/>Funding?/Why do I need it?/How does Business Funding work?</h3><div class="spacer-40"></div><p class="text-subheading text-color-dark-gray2">Cash flow injection whenever you need it. Controlled affordability and tailored repayment plans, serves as a strong alternative to traditional loans, providing a fast access to funds on your terms.</p></div><div class="accuarcy-card-video_wrapper"><div class="accuarcy-video_embed w-embed"><video class="cards-video"id="accuarcy-video" muted="muted" autoplay="autoplay" playsinline preload="auto" loop data-custom-attribute="video" width="100%" height="100%">
+      <source src="#" type="video/webm">   
+    </video>
+    
+    <img id="accuracy-video-mobile" width="100%" height="100%" display="none" autoplay="autoplay" preload="metadata" playsinline muted="on" class="is-mobile-only" loop="loop" src="#" alt="Decorative video with abstract shapes"></div></div></div></div><div data-w-id="01c576ee-e9b3-1630-d3d3-b1973391b139" class="accuracy-card_item"><div class="accuarcy-card-content_wrapper"><div class="max-width-454"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="text-body1 is-green">02</div></div><div class="spacer-60"></div><h3>How much funding<br/>can I get?</h3><div class="spacer-40"></div><p class="text-subheading text-color-dark-gray2">Varying on the size of your business we offer funding from £1.000 to £1M </p></div><div class="accuarcy-card-video_wrapper"><div class="accuarcy-video_embed w-embed"><video class="cards-video" id="accuarcy-video" muted="muted" autoplay="autoplay" playsinline preload="auto" loop data-custom-attribute="video" width="100%" height="100%">
+      <source src="#" type="video/webm">   
+    </video>
+    
+    
+    <img id="accuracy-video-mobile" width="100%" height="100%" display="none" autoplay="autoplay" preload="metadata" playsinline muted="on" class="is-mobile-only" loop="loop" src="#" alt="Decorative video with abstract shapes"></div></div></div></div><div data-w-id="f5f31aa4-7ccc-8214-2f61-cb688c28bd46" class="accuracy-card_item"><div class="accuarcy-card-content_wrapper"><div class="max-width-454"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="text-body1 is-green">03</div></div><div class="spacer-60"></div><h3>What's the<br/>repayment plan?</h3><div class="spacer-40"></div><p class="text-subheading text-color-dark-gray2">Repayment fee on average varies from 10% to 15% of the initial amount and is spread across the funding term. Funding is repaid through a daily card sales percentage deduction based on a pre-agreed fixed percentage, which you choose.</p></div><div class="accuarcy-card-video_wrapper"><div class="accuarcy-video_embed w-embed"><video class="cards-video" id="accuarcy-video" muted="muted" autoplay="autoplay" playsinline preload="auto" loop data-custom-attribute="video" width="100%" height="100%">
+      <source src="#" type="video/webm">   
+    </video>
+    
+    <img id="accuracy-video-mobile" width="100%" height="100%" display="none" autoplay="autoplay" preload="metadata" playsinline muted="on" class="is-mobile-only" loop="loop" src="#" alt="Decorative video with abstract shapes"></div></div></div></div><div data-w-id="0317408e-8f18-70de-2dc5-25a786886c26" class="accuracy-card_item"><div class="accuarcy-card-content_wrapper"><div class="max-width-454"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="text-body1 is-green">04</div></div><div class="spacer-60"></div><h3>We approve<br/>9 out of 10 businesses</h3><div class="spacer-40"></div><p class="text-subheading text-color-dark-gray2">You are eligible if your business has been trading actively for more than 3 months and averages more than £1.500 in monthly card sales or online sales.</p></div><div class="accuarcy-card-video_wrapper"><div class="accuarcy-video_embed w-embed"><video class="cards-video" id="accuarcy-video" muted="muted" autoplay="autoplay" playsinline preload="auto" loop data-custom-attribute="video" width="100%" height="100%">
+      <source src="#" type="video/webm">   
+    </video>
+    
+    <img id="accuracy-video-mobile" width="100%" height="100%" display="none" autoplay="autoplay" preload="metadata" playsinline muted="on" class="is-mobile-only" loop="loop" src="#" alt="Decorative video with abstract shapes"></div></div></div></div></div></section><section class="section_home-evals-2"><div class="padding-global is-no-padding-mobile"><div class="gray1-shape_wrapper"><div class="container-1278"><div class="padding-vertical padding-custom1"><div class="center-text_wrapper"><div class="max-width-400"><h2>Don't take our word for it!</h2></div></div><div class="spacer-60"></div><div class="image-evals-wrapper"><div class="evals-flow_image is-desktop" data-w-id="52ae5c5b-ce0a-4cd1-7ce9-6ce3f157f4bb" data-animation-type="lottie" data-src="assets/animation-stock.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="12" data-duration="0"></div><div class="evals-flow_image is-mobile-only" data-w-id="f3f08b09-12c6-602e-2f3f-a801fc317b1f" data-animation-type="lottie" data-src="assets/animation-stock.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="12" data-duration="0"></div></div><div class="spacer-142-120-mobile"></div><div class="evals-2col_wrapper"><div class="single_card-wrapper"><div class="single_card-content"><div class="single_card-content-top"><h3>Trusted by 40.000+ merchants</h3><div class="spacer-48"></div><div class="points-wrapper"><div class="point-text-wrapper"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+    </svg></div><div class="text-body1 is-green">02</div></div><p class="text-subheading">The funding allowed me to expand my practice and hire new employees. Repayments were proportionate to my revenue, so I could invest confidently despite uncertainty caused by COVID.</p></div><div class="point-text-wrapper"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+        <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+      </svg></div><div class="text-body1 is-green">02</div></div><p class="text-subheading">Joanna Carp - PhysioJo</p></div><div class="point-text-wrapper"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+        <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+      </svg></div><div class="text-body1 is-green">02</div></div><p class="text-subheading">I requested top-up one morning and was funded by the afternoon. With this flexible funding facility I can make the most of my cashflow and invest in supplies and advertising to grow my business.</p></div><div class="point-text-wrapper"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+          <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+      </svg></div><div class="text-body1 is-green">02</div></div><p class="text-subheading">Glenn Hanstock - TechMagnet</p></div><div class="point-text-wrapper"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+          <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+      </svg></div><div class="text-body1 is-green">03</div></div><a href="https://uk.trustpilot.com/review/dojo.tech" target="_blank"><img src="assets/trustpilot.png" alt="Trustpilot" class="trustpilot"> </a></div></div></div><div class="single_card-content-bottom"><div class="button-group"><a data-button-style="solid" data-btn="wrap" id="w-node-_84357237-5f48-cec8-938a-6db6257be753-06c321c78" href="contact.html" class="btn_main_wrap w-inline-blocknone"><div class="btn_main_innera is-darknone"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+          <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+      </svg></div><div id="w-node-_19a6738e-a3f6-e138-9a71-085cdc664a7d-06c321c7" class="grid-line-middle">
+        <circle cx="1.5" cy="2" r="1.5" fill="white"/>
+      </svg></div><div class="btn_main_texta is-primary text-color-white"></div></div></a><a href="https://uk.trustpilot.com/review/dojo.tech" class="link-docs w-inline-block"><button data-w-id="84357237-5f48-cec8-938a-6db6257be75c" class="button-block-secondary opacity-60"><div class="button-icon-wrap-secondary"><div class="button-text-icon text-color-black w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="currentColor">
+        <path d="M7.05703 0.712928L7.78707 1.44297L0.745247 8.5L0 7.76996L7.05703 0.712928ZM8 0.5V4.75856H7.05703V1.42776H3.72624V0.5H8Z" fill="currentColor"/>
+      </svg></div><div class="button-text-icon is-absolute text-color-black w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="currentColor">
+        <path d="M7.05703 0.712928L7.78707 1.44297L0.745247 8.5L0 7.76996L7.05703 0.712928ZM8 0.5V4.75856H7.05703V1.42776H3.72624V0.5H8Z" fill="currentColor"/>
+      </svg></div></div><div class="btn_main_texta text-color-black">Go to Trustpilot</div></button></a></div></div></div></div><div id="w-node-_6c17cafd-7f54-64b0-92e1-f02f6ae50f33-06c321c7" class="single_card-wrapper"><div class="single_card-content">
+      <div class="single_card-content-top"> <video class="testimony-up" width="100%" height="auto" controls preload="metadata"><source src="assets/funding-libertie.mp4" type="video/mp4"> Your browser does not support the video.</video><div class="spacer-48"></div><div class="points-wrapper"><div class="point-text-wrapper"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+          <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+       </svg></div><div class="text-body1 is-green">02</div></div><p class="text-subheading">"The impact was immediate with a significant like-for-like increase in sales. Customers are much happier and our staff bought in - win-win.”</br>Jonathan – Founder, The Breakfast Club</p></div><div class="point-text-wrapper"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+          <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+      </svg></div><div class="text-body1 is-green">02</div></div><img src="assets/bookingout.png" alt="partnership" class="partnership"></div></div><div class="point-text-wrapper"><div class="dot-number-wrapper"><div class="dot-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+          <circle cx="1.5" cy="1.5" r="1.5" fill="#00BD83"/>
+        </svg></div><div class="text-body1 is-green">03</div></div><p class="text-subheading"><strong>Hit the ground running</strong><br/>After a bespoke onboarding to the platform, we’ll add a single line of code to your site. Setup’s easy – you’ll be ready to start training staff in no time.</p></div></div></div><div class="single_card-content-bottom"><div class="button-group"><a data-button-style="solid" data-btn="wrap" id="w-node-_84357237-5f48-cec8-938a-6db6257be753-06c321c7" href="contact.html" class="btn_main_wrap w-inline-block"><div class="btn_main_innera is-dark"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+            <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+      </svg></div><div class="btn_main_texta">Book a call</div></div><div data-btn="clip" class="btn_main_innera hover"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+        <circle cx="1.5" cy="2" r="1.5" fill="white"/>
+      </svg></div><div class="btn_main_texta is-primary text-color-white">Book a call</div></div></a><a href="#" class="link-docs w-inline-block"><button data-w-id="6c17cafd-7f54-64b0-92e1-f02f6ae50f5e" class="button-block-secondary opacity-60none"><div class="button-icon-wrap-secondary"><div class="button-text-icon text-color-black w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="currentColor">
+        <path d="M7.05703 0.712928L7.78707 1.44297L0.745247 8.5L0 7.76996L7.05703 0.712928ZM8 0.5V4.75856H7.05703V1.42776H3.72624V0.5H8Z" fill="currentColor"/>
+      </svg></div><div class="button-text-icon is-absolute text-color-black w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="currentColor">
+        <path d="M7.05703 0.712928L7.78707 1.44297L0.745247 8.5L0 7.76996L7.05703 0.712928ZM8 0.5V4.75856H7.05703V1.42776H3.72624V0.5H8Z" fill="currentColor"/>
+      </svg></div></div><div class="btn_main_texta text-color-blacknone"></div></button></a></div></div></div></div></div></div></div><div class="w-layout-grid _3-col_grid-base is-absolute"><div id="w-node-a5a103a4-7f67-76cd-1780-71de187ba50a-06c321c7" class="is-grid-lines is-top"></div><div id="w-node-a5a103a4-7f67-76cd-1780-71de187ba50b-06c321c7" class="is-grid-lines is-right is-top"></div></div></div></div></section><div class="background-color-black"><header class="section_cta"><div class="padding-global"><div class="container-620"><div class="align-center"><h1 class="text-color-white text-align-center">Guaranteed effortles process</h1><div class="spacer-40"></div><div class="max-width-500"><p class="text-subheading text-color-white opacity-60 text-align-center">Ready to explore timeless investment?</br><strong>Make every second count</strong></p></div><div class="spacer-32"></div><div class="button-group gap-16 is-center flex-vertical-mobile"><a data-button-style="solid" data-btn="wrap" id="w-node-aecffcf5-6fdc-97af-c00b-278383b266f8-83b266eb" href="signup.html" class="btn_main_wrap w-inline-block"><div class="btn_main_innera is-center"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+        <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+      </svg></div><div class="btn_main_texta is-primary">Apply now</div></div><div data-btn="clip" class="btn_main_innera hover is-center is-100"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+        <circle cx="1.5" cy="2" r="1.5" fill="white"/>
+      </svg></div><div class="btn_main_texta is-primary text-color-white">Sign Up</div></div></a><a data-button-style="solid" data-btn="wrap" id="w-node-aecffcf5-6fdc-97af-c00b-278383b26701-83b266eb" href="contact.html" class="btn_main_wrap w-inline-block"><div class="btn_main_innera is-secondary"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+        <circle cx="1.5" cy="2" r="1.5" fill="#00BD83"/>
+      </svg></div><div class="btn_main_texta">Book a call</div></div><div data-btn="clip" class="btn_main_innera hover is-secondary"><div class="dot-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+        <circle cx="1.5" cy="2" r="1.5" fill="white"/>
+    <script>
+    // Debounce function to limit the rate at which a function is executed
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    // Function to update video sources
+    function updateVideoSources() {
+        const videos = document.querySelectorAll('video'); // Select all video elements
+        videos.forEach(video => {
+            const sources = video.querySelectorAll('source[data-src]'); // Select all source elements with a "data-src" attribute within each video
+            if (window.innerWidth > 990) {
+                sources.forEach(source => {
+                    source.src = source.getAttribute('data-src'); // If screen width > 990, set src to data-src
+                });
+            } else {
+                sources.forEach(source => {
+                    source.src = '#'; 
+                });
+            }
+            video.load(); // Important: load the new source(s) into the video
+        });
+    }
+    
+    // Event listener for DOMContentLoaded to run once on start
+    document.addEventListener('DOMContentLoaded', function() {
+        updateVideoSources();
+    });
+    
+    // Event listener for resize with debounce
+    window.addEventListener('resize', debounce(updateVideoSources, 250)); // Debounce resize event
+    
+    </script><script src="mainscript.js"></script>
+    <script>
+    $("[data-btn='wrap']").each(function () {
+      const clipEl = $(this).find("[data-btn='clip']").attr("aria-hidden", "true");
+      const durationSetting = 0.4;
+      const easeSetting = "power2.out";
+    
+      function getPercentTop(el, e) {
+        let elTop = el.offset().top - $(window).scrollTop();
+        let mouseTop = e.pageY - $(window).scrollTop() - elTop;
+        return (mouseTop / el.innerHeight()) * 100;
+      }
+      function getPercentLeft(el, e) {
+        let elLeft = el.offset().left;
+        let mouseLeft = e.pageX - elLeft;
+        return (mouseLeft / el.innerWidth()) * 100;
+      }
+      $(this).on("mouseenter", function (e) {
+        let percentTop = getPercentTop($(this), e);
+        let percentLeft = getPercentLeft($(this), e);
+        gsap.set(clipEl, { display: "flex" });
+        gsap.fromTo(clipEl, { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` }, { clipPath: `circle(141.4% at ${percentLeft}% ${percentTop}%)`, duration: durationSetting, ease: easeSetting });
+      });
+      $(this).on("mouseleave", function (e) {
+        let percentTop = getPercentTop($(this), e);
+        let percentLeft = getPercentLeft($(this), e);
+        gsap.to(clipEl, { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)`, overwrite: true, duration: durationSetting, ease: easeSetting });
+      });
+    });
+    </script>
+  </body>
+  </html>
